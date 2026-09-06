@@ -6,9 +6,10 @@ Balise s'adresse aux artisans, professions libérales, restaurants, commerces lo
 
 ## Offre
 
-- Pack Site Vitrine : 400€ net, paiement unique, un site de 20 à 30 pages rédigé pour l'activité du client, livré en 7 à 10 jours ouvrés. Hébergement et nom de domaine inclus dans la mise en place.
+- Pack Site Vitrine : 400€ net, paiement unique, un site de 20 à 30 pages rédigé pour l'activité du client, livré en 7 à 10 jours ouvrés. Hébergement inclus ; le nom de domaine est accompagné mais son achat (~10-20€/an) reste à la charge du client.
 - Option Blog + 10 articles : 200€ en complément, 10 articles de 600 à 900 mots optimisés SEO.
 - Options à la carte détaillées avec prix exact sur /tarifs (article supplémentaire, logo, page additionnelle, suivi mensuel).
+- Non inclus : achat du nom de domaine, et abonnement de tout outil tiers branché sur le site (réservation, paiement, newsletter...) — facturés directement par le tiers concerné.
 
 ## Pages clés
 

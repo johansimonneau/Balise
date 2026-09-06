@@ -6,10 +6,20 @@ import CTABanner from "../components/CTABanner.astro";
 const alaCarte = [
   { item: "Article de blog supplémentaire (600-900 mots, optimisé SEO)", price: "15 € / article" },
   { item: "Identité visuelle simple (logo + palette de couleurs)", price: "90 €" },
-  { item: "Nom de domaine personnalisé (.fr, .com…)", price: "prix réel du registrar, ~12-15 €/an" },
   { item: "Refonte d'un site existant vers le pack Balise", price: "à partir de 250 €, sur devis" },
   { item: "Page supplémentaire au-delà de 30 pages", price: "20 € / page" },
   { item: "Suivi & petites retouches mensuelles (sans engagement)", price: "29 € / mois" },
+];
+
+const nonInclus = [
+  {
+    item: "Nom de domaine (.fr, .com…)",
+    detail: "Achat et renouvellement annuel facturés directement par le registrar (~10 à 20 €/an selon l'extension). Nous vous accompagnons pour le choisir et le configurer, mais son coût n'est pas dans le pack.",
+  },
+  {
+    item: "Outils tiers branchés sur le site",
+    detail: "Réservation en ligne, paiement, newsletter, chat, avis clients... L'intégration peut être faite, mais l'abonnement de l'outil est facturé directement par son éditeur, à votre charge.",
+  },
 ];
 
 const jsonLd = {
@@ -63,7 +73,7 @@ const jsonLd = {
           "Design responsive moderne, adapté à votre image",
           "Structure SEO de base (titres, méta, sitemap, maillage interne)",
           "Formulaire de contact fonctionnel",
-          "Hébergement + nom de domaine configurés",
+          "Hébergement inclus, nom de domaine accompagné (achat à votre charge)",
           "Mise en ligne sous 5 à 10 jours ouvrés",
           "Une relecture humaine complète avant publication",
         ]}
@@ -112,11 +122,26 @@ const jsonLd = {
     </div>
   </section>
 
+  <section class="container-balise py-16">
+    <h2 class="font-display text-2xl font-bold text-ink">Ce qui reste à votre charge</h2>
+    <p class="mt-2 max-w-2xl text-sm text-ink-soft">
+      Deux frais ne sont volontairement pas inclus dans le pack, parce qu'ils ne dépendent pas de nous : ils sont facturés directement par un tiers (registrar ou éditeur d'outil), pas par Balise.
+    </p>
+    <div class="mt-8 grid gap-6 sm:grid-cols-2">
+      {nonInclus.map((row) => (
+        <div class="rounded-2xl border border-clay/30 bg-clay-light p-6">
+          <h3 class="font-display font-semibold text-ink">{row.item}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink-soft">{row.detail}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
   <section class="container-balise py-8 pb-24">
     <div class="grid gap-6 sm:grid-cols-3">
       <div class="rounded-2xl border border-line bg-white p-6">
         <h3 class="font-display font-semibold text-ink">Aucun abonnement obligatoire</h3>
-        <p class="mt-2 text-sm text-ink-soft">Le pack est un paiement unique. Le site vous appartient, hébergement et nom de domaine compris.</p>
+        <p class="mt-2 text-sm text-ink-soft">Le pack est un paiement unique. Le site vous appartient, hébergement inclus — seul l'achat du nom de domaine reste à votre charge.</p>
       </div>
       <div class="rounded-2xl border border-line bg-white p-6">
         <h3 class="font-display font-semibold text-ink">Devis écrit avant tout paiement</h3>
