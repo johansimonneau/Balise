@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cairn-web.fr/sitemap-index.xml
+Sitemap: https://balise-web.fr/sitemap-index.xml

@@ -1,6 +1,6 @@
-# Cairn
+# Balise
 
-Site vitrine de Cairn — service de création de sites internet par IA pour petites entreprises. Construit avec [Astro](https://astro.build) + Tailwind CSS 4, pensé pour le SEO classique et le GEO (référencement dans les réponses des IA génératives).
+Site vitrine de Balise — service de création de sites internet par IA pour petites entreprises. Construit avec [Astro](https://astro.build) + Tailwind CSS 4, pensé pour le SEO classique et le GEO (référencement dans les réponses des IA génératives).
 
 ## Développement local
 
@@ -28,10 +28,10 @@ Le déploiement est automatique via `.github/workflows/deploy.yml` à chaque pus
 
 ### Nom de domaine personnalisé
 
-Pour utiliser un domaine comme `cairn-web.fr` :
+Pour utiliser un domaine comme `balise-web.fr` :
 
 1. Achetez le domaine chez un registrar (OVH, Gandi, Namecheap...).
-2. Ajoutez un fichier `public/CNAME` contenant uniquement votre domaine, ex. `cairn-web.fr`.
+2. Ajoutez un fichier `public/CNAME` contenant uniquement votre domaine, ex. `balise-web.fr`.
 3. Configurez chez votre registrar un enregistrement `ALIAS`/`ANAME` (ou 4 enregistrements `A` vers les IP GitHub Pages : `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) et un `CNAME` `www` vers `<votre-compte>.github.io`.
 4. Dans **Settings → Pages**, renseignez le domaine personnalisé et activez "Enforce HTTPS".
 5. Mettez à jour `site` dans `astro.config.mjs` avec votre domaine final (utilisé pour le sitemap et les URLs canoniques).
@@ -40,9 +40,9 @@ Pour utiliser un domaine comme `cairn-web.fr` :
 
 - **`src/pages/mentions-legales.astro`** et **`src/pages/cgv.astro`** : remplacer les champs `[À COMPLÉTER]` (statut juridique, SIRET, adresse, registrar du nom de domaine). Une relecture par un professionnel du droit est recommandée pour les CGV.
 - **`src/pages/contact.astro`** : le formulaire envoie déjà les demandes par e-mail à `johansimonneau.pro@gmail.com` via [FormSubmit](https://formsubmit.co) — aucun compte à créer, aucun nom de domaine requis. À la toute première soumission, FormSubmit envoie un e-mail d'activation à cette adresse : il faut cliquer une fois sur le lien de confirmation pour que les envois suivants partent automatiquement.
-- **`public/og-cairn.svg`** : image de partage réseaux sociaux actuellement en SVG. Pour une compatibilité maximale (Facebook, LinkedIn), exportez une version PNG 1200x630 (par exemple via Canva) et remplacez la référence dans `src/components/SEO.astro`.
+- **`public/og-balise.svg`** : image de partage réseaux sociaux actuellement en SVG. Pour une compatibilité maximale (Facebook, LinkedIn), exportez une version PNG 1200x630 (par exemple via Canva) et remplacez la référence dans `src/components/SEO.astro`.
 - **`src/pages/realisations.astro`** : contient des exemples de structure de site, clairement labellisés comme tels. À remplacer progressivement par de vrais projets clients, avec leur accord.
-- **`astro.config.mjs`** : le champ `site` est réglé sur `https://cairn-web.fr` à titre d'exemple — à ajuster selon le domaine réellement acheté.
+- **`astro.config.mjs`** : le champ `site` est réglé sur `https://balise-web.fr` à titre d'exemple — à ajuster selon le domaine réellement acheté.
 
 ## Structure du contenu
 

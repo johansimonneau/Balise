@@ -10,7 +10,7 @@ const current = Astro.url.pathname;
 ---
 
 <header class="sticky top-0 z-50 border-b border-line/80 bg-paper/90 backdrop-blur">
-  <div class="container-cairn flex h-16 items-center justify-between">
+  <div class="container-balise flex h-16 items-center justify-between">
     <a href="/" class="flex items-center gap-2 font-display text-lg font-semibold tracking-tight text-ink">
       <span class="flex h-8 w-8 items-center justify-center rounded-full bg-ink text-paper">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -18,7 +18,7 @@ const current = Astro.url.pathname;
           <path d="M9 20L12 12L15 20" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
         </svg>
       </span>
-      Cairn
+      Balise
     </a>
 
     <nav class="hidden items-center gap-8 md:flex" aria-label="Navigation principale">
@@ -53,7 +53,7 @@ const current = Astro.url.pathname;
   </div>
 
   <nav id="mobile-menu" class="hidden border-t border-line bg-paper md:hidden" aria-label="Navigation mobile">
-    <div class="container-cairn flex flex-col gap-1 py-4">
+    <div class="container-balise flex flex-col gap-1 py-4">
       {nav.map((item) => (
         <a href={item.href} class="rounded-lg px-3 py-2.5 text-sm text-ink-soft hover:bg-paper-dim">
           {item.label}

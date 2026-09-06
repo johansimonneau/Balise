@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://cairn-web.fr',
+  site: 'https://balise-web.fr',
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],

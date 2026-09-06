@@ -6,11 +6,11 @@ import TestimonialCard from "../components/TestimonialCard.astro";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Cairn",
-  url: "https://cairn-web.fr",
-  logo: "https://cairn-web.fr/favicon.svg",
+  name: "Balise",
+  url: "https://balise-web.fr",
+  logo: "https://balise-web.fr/favicon.svg",
   description:
-    "Cairn conçoit des sites internet vitrines pour les petites entreprises grâce à l'intelligence artificielle, à partir de 400€.",
+    "Balise conçoit des sites internet vitrines pour les petites entreprises grâce à l'intelligence artificielle, à partir de 400€.",
   areaServed: "FR",
   founder: {
     "@type": "Person",
@@ -43,12 +43,12 @@ const steps = [
 ---
 
 <BaseLayout
-  title="Cairn — Sites internet créés par l'IA pour petites entreprises, dès 400€"
-  description="Cairn crée votre site vitrine avec l'IA : 20 à 30 pages, rédaction SEO incluse, mise en ligne rapide. Dès 400€ net, sans abonnement caché."
+  title="Balise — Sites internet créés par l'IA pour petites entreprises, dès 400€"
+  description="Balise crée votre site vitrine avec l'IA : 20 à 30 pages, rédaction SEO incluse, mise en ligne rapide. Dès 400€ net, sans abonnement caché."
   jsonLd={jsonLd}
 >
   <!-- Hero -->
-  <section class="container-cairn pt-16 pb-20 sm:pt-24 sm:pb-28">
+  <section class="container-balise pt-16 pb-20 sm:pt-24 sm:pb-28">
     <div class="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
       <div>
         <p class="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-1.5 text-xs font-medium text-ink-soft">
@@ -60,7 +60,7 @@ const steps = [
           <span class="text-moss">posé par l'IA</span>, cadré par des humains.
         </h1>
         <p class="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
-          Cairn conçoit des sites vitrines de 20 à 30 pages pour les artisans, indépendants et petits commerces qui n'ont ni le temps ni l'envie de se battre avec un éditeur de site.
+          Balise conçoit des sites vitrines de 20 à 30 pages pour les artisans, indépendants et petits commerces qui n'ont ni le temps ni l'envie de se battre avec un éditeur de site.
           Contenu rédigé, structure pensée pour le référencement, mise en ligne rapide. À partir de <strong class="text-ink">400€ net</strong>, sans abonnement obligatoire.
         </p>
         <div class="mt-8 flex flex-wrap items-center gap-4">
@@ -108,7 +108,7 @@ const steps = [
 
   <!-- Pour qui -->
   <section class="border-y border-line bg-paper-dim py-16">
-    <div class="container-cairn">
+    <div class="container-balise">
       <p class="text-center text-sm font-medium uppercase tracking-wide text-stone">Pensé pour ceux qui n'ont pas le temps</p>
       <div class="mt-8 grid grid-cols-2 gap-4 text-center sm:grid-cols-3 lg:grid-cols-6">
         {[
@@ -128,7 +128,7 @@ const steps = [
   </section>
 
   <!-- Process -->
-  <section class="container-cairn py-24">
+  <section class="container-balise py-24">
     <div class="max-w-2xl">
       <h2 class="font-display text-3xl font-bold tracking-tight text-ink">De l'idée au site en ligne, en 4 étapes</h2>
       <p class="mt-4 text-ink-soft">Aucune étape magique cachée : voici exactement ce qui se passe entre votre premier message et la mise en ligne.</p>
@@ -148,7 +148,7 @@ const steps = [
   </section>
 
   <!-- Preuve sociale -->
-  <section class="container-cairn py-8 pb-24">
+  <section class="container-balise py-8 pb-24">
     <h2 class="font-display text-3xl font-bold tracking-tight text-ink">Ce qu'on nous dit</h2>
     <div class="mt-10 grid gap-6 sm:grid-cols-3">
       <TestimonialCard

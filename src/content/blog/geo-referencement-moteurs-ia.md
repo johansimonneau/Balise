@@ -22,7 +22,7 @@ Le SEO traditionnel optimise pour un algorithme de classement de pages. Le GEO o
 
 ## Un exemple concret
 
-Une page qui commence par "Nous sommes une entreprise passionnée à votre écoute depuis toujours" n'apporte aucune information exploitable. Une page qui commence par "Cairn crée des sites vitrines de 20 à 30 pages pour 400€ net, livrés en 7 à 10 jours ouvrés" donne un fait précis, citable tel quel par un modèle de langage.
+Une page qui commence par "Nous sommes une entreprise passionnée à votre écoute depuis toujours" n'apporte aucune information exploitable. Une page qui commence par "Balise crée des sites vitrines de 20 à 30 pages pour 400€ net, livrés en 7 à 10 jours ouvrés" donne un fait précis, citable tel quel par un modèle de langage.
 
 ## Le fichier llms.txt, une pratique émergente
 

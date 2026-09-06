@@ -1,8 +1,8 @@
-# Cairn
+# Balise
 
-> Cairn crée des sites internet vitrines pour les petites entreprises et indépendants grâce à l'intelligence artificielle, avec relecture humaine systématique avant mise en ligne.
+> Balise crée des sites internet vitrines pour les petites entreprises et indépendants grâce à l'intelligence artificielle, avec relecture humaine systématique avant mise en ligne.
 
-Cairn s'adresse aux artisans, professions libérales, restaurants, commerces locaux, coachs indépendants et associations qui n'ont pas le temps ou le budget pour un site sur-mesure en agence traditionnelle.
+Balise s'adresse aux artisans, professions libérales, restaurants, commerces locaux, coachs indépendants et associations qui n'ont pas le temps ou le budget pour un site sur-mesure en agence traditionnelle.
 
 ## Offre
 

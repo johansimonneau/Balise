@@ -3,6 +3,6 @@
   <circle cx="1000" cy="120" r="220" fill="#2f5d4a" opacity="0.25"/>
   <path d="M120 420L280 120L440 420Z" stroke="#faf9f6" stroke-width="6" fill="none" stroke-linejoin="round"/>
   <path d="M220 420L280 300L340 420" stroke="#faf9f6" stroke-width="6" fill="none" stroke-linejoin="round"/>
-  <text x="120" y="500" font-family="Georgia, serif" font-size="72" fill="#faf9f6" font-weight="700">Cairn</text>
+  <text x="120" y="500" font-family="Georgia, serif" font-size="72" fill="#faf9f6" font-weight="700">Balise</text>
   <text x="120" y="555" font-family="Arial, sans-serif" font-size="28" fill="#c9c5b8">Des sites web posés par l'IA, cadrés par des humains</text>
 </svg>

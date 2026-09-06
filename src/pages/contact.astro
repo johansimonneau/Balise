@@ -6,9 +6,9 @@ const CONTACT_EMAIL = "johansimonneau.pro@gmail.com";
 
 <BaseLayout
   title="Contact — parlez-nous de votre projet de site"
-  description="Décrivez votre activité et vos besoins : vous recevez un devis clair pour votre site vitrine Cairn sous 24h."
+  description="Décrivez votre activité et vos besoins : vous recevez un devis clair pour votre site vitrine Balise sous 24h."
 >
-  <section class="container-cairn py-16 sm:py-24">
+  <section class="container-balise py-16 sm:py-24">
     <div class="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
       <div>
         <p class="text-sm font-medium uppercase tracking-wide text-moss">Contact</p>
@@ -40,11 +40,11 @@ const CONTACT_EMAIL = "johansimonneau.pro@gmail.com";
         method="POST"
         class="rounded-3xl border border-line bg-white p-8"
       >
-        <input type="hidden" name="_subject" value="Nouvelle demande — Site Cairn" />
+        <input type="hidden" name="_subject" value="Nouvelle demande — Site Balise" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_next" value={`${Astro.site}merci`} />
-        <input type="hidden" name="Provenance" value="Formulaire de contact du site Cairn" />
+        <input type="hidden" name="Provenance" value="Formulaire de contact du site Balise" />
         <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
 
         <div class="grid gap-5 sm:grid-cols-2">

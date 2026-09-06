@@ -12,14 +12,14 @@ const {
   title,
   description,
   path = Astro.url.pathname,
-  image = "/og-cairn.svg",
+  image = "/og-balise.svg",
   noindex = false,
   jsonLd,
 } = Astro.props;
 
-const site = Astro.site?.toString().replace(/\/$/, "") ?? "https://cairn-web.fr";
+const site = Astro.site?.toString().replace(/\/$/, "") ?? "https://balise-web.fr";
 const canonical = `${site}${path}`;
-const fullTitle = title.includes("Cairn") ? title : `${title} · Cairn`;
+const fullTitle = title.includes("Balise") ? title : `${title} · Balise`;
 const jsonLdList = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 ---
 
@@ -34,7 +34,7 @@ const jsonLdList = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 <meta property="og:url" content={canonical} />
 <meta property="og:image" content={`${site}${image}`} />
 <meta property="og:locale" content="fr_FR" />
-<meta property="og:site_name" content="Cairn" />
+<meta property="og:site_name" content="Balise" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={fullTitle} />

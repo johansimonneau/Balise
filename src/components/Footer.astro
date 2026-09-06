@@ -3,7 +3,7 @@ const columns = [
   {
     title: "Offre",
     links: [
-      { href: "/offre", label: "L'offre Cairn" },
+      { href: "/offre", label: "L'offre Balise" },
       { href: "/tarifs", label: "Tarifs" },
       { href: "/comment-ca-marche", label: "Comment ça marche" },
       { href: "/realisations", label: "Réalisations" },
@@ -43,7 +43,7 @@ const columns = [
 ---
 
 <footer class="border-t border-line bg-paper-dim">
-  <div class="container-cairn grid gap-10 py-16 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
+  <div class="container-balise grid gap-10 py-16 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
     <div>
       <a href="/" class="flex items-center gap-2 font-display text-lg font-semibold text-ink">
         <span class="flex h-8 w-8 items-center justify-center rounded-full bg-ink text-paper">
@@ -52,12 +52,12 @@ const columns = [
             <path d="M9 20L12 12L15 20" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
           </svg>
         </span>
-        Cairn
+        Balise
       </a>
       <p class="mt-4 max-w-xs text-sm leading-relaxed text-ink-soft">
         Des sites web posés par l'IA, cadrés par des humains. On balise le chemin pour que les petites entreprises aient enfin un site qui travaille pour elles.
       </p>
-      <p class="mt-6 text-xs text-stone">© {new Date().getFullYear()} Cairn — Johan Simonneau. Fait avec Astro, hébergé sur GitHub Pages.</p>
+      <p class="mt-6 text-xs text-stone">© {new Date().getFullYear()} Balise — Johan Simonneau. Fait avec Astro, hébergé sur GitHub Pages.</p>
     </div>
 
     {columns.map((col) => (
