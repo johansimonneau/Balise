@@ -2,56 +2,66 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTABanner from "../components/CTABanner.astro";
 
-const exemples = [
+// À COMPLÉTER : remplacez secteur/description/url pour chaque projet avec les informations réelles.
+const projets = [
   {
-    secteur: "Artisan du bâtiment",
-    pages: "24 pages",
-    structure: ["Accueil", "6 pages métiers (rénovation, électricité, plomberie...)", "Zone d'intervention (8 communes)", "Réalisations", "Devis", "Contact"],
+    nom: "Nidly",
+    secteur: "[À COMPLÉTER — secteur d'activité]",
+    description: "[À COMPLÉTER — une ou deux phrases sur le projet : objectif, ce qui a été mis en place, résultat obtenu]",
+    url: "",
   },
   {
-    secteur: "Coach indépendante",
-    pages: "22 pages",
-    structure: ["Accueil", "Méthode", "5 pages par type d'accompagnement", "Témoignages", "Blog (option incluse)", "Réserver un appel"],
+    nom: "johansimonneau.fr",
+    secteur: "Site personnel — acquisition digitale (SEO, GEO, Ads)",
+    description: "[À COMPLÉTER — une ou deux phrases sur le positionnement du site et ce qu'il présente]",
+    url: "https://johansimonneau.fr",
   },
   {
-    secteur: "Restaurant de quartier",
-    pages: "18 pages",
-    structure: ["Accueil", "Carte détaillée", "Menu du midi", "Événements privés", "Galerie", "Avis", "Réservation", "Contact & horaires"],
+    nom: "Studio Cairn",
+    secteur: "[À COMPLÉTER — secteur d'activité]",
+    description: "[À COMPLÉTER — une ou deux phrases sur le projet]",
+    url: "",
+  },
+  {
+    nom: "Velodom",
+    secteur: "[À COMPLÉTER — secteur d'activité]",
+    description: "[À COMPLÉTER — une ou deux phrases sur le projet]",
+    url: "",
   },
 ];
 ---
 
 <BaseLayout
-  title="Réalisations — exemples de structures de site Cairn"
-  description="Aperçu de la manière dont Cairn structure un site vitrine de 20 à 30 pages selon le secteur d'activité, avant publication des premiers projets clients réels."
+  title="Réalisations — les projets web menés par Johan Simonneau"
+  description="Un aperçu des sites conçus par Johan Simonneau (Nidly, Studio Cairn, Velodom...), avant l'arrivée des premiers projets clients Cairn."
 >
   <section class="container-cairn pt-16 pb-8">
     <p class="text-sm font-medium uppercase tracking-wide text-moss">Réalisations</p>
     <h1 class="mt-3 max-w-2xl font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-      À quoi ressemble un site Cairn, concrètement
+      Des sites déjà conçus, une méthode qui a fait ses preuves
     </h1>
     <p class="mt-6 max-w-2xl text-lg text-ink-soft">
-      Cairn est un service jeune : cette page présente pour l'instant des exemples de structure type, secteur par secteur, pour montrer comment un pack de 20 à 30 pages se construit concrètement. Les premiers projets clients réels viendront progressivement remplacer ces exemples.
+      Cairn est un service jeune, mais pas une première expérience : Johan Simonneau conçoit des sites depuis plusieurs années. Voici quelques projets menés avant Cairn, qui donnent une idée du niveau d'exigence appliqué à chaque site — désormais accéléré par l'IA sur la partie rédaction et structure.
     </p>
     <p class="mt-4 max-w-2xl rounded-xl border border-line bg-paper-dim px-4 py-3 text-sm text-ink-soft">
-      Transparence : les trois cas ci-dessous sont des exemples de structure (maquettes de démonstration), pas des sites de clients existants.
+      Transparence : ces projets n'ont pas été réalisés avec le processus IA + relecture humaine décrit sur ce site — ils illustrent l'expérience web de Johan, pas encore un projet client Cairn. Les premiers projets Cairn viendront enrichir cette page au fil des livraisons.
     </p>
   </section>
 
   <section class="container-cairn py-8 pb-24">
-    <div class="grid gap-6 md:grid-cols-3">
-      {exemples.map((ex) => (
+    <div class="grid gap-6 sm:grid-cols-2">
+      {projets.map((p) => (
         <div class="rounded-3xl border border-line bg-white p-6">
-          <span class="inline-flex rounded-full bg-moss-light px-3 py-1 text-xs font-medium text-moss">{ex.pages}</span>
-          <h2 class="mt-4 font-display text-lg font-semibold text-ink">{ex.secteur}</h2>
-          <ul class="mt-4 space-y-2">
-            {ex.structure.map((line) => (
-              <li class="flex items-start gap-2 text-sm text-ink-soft">
-                <span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-stone"></span>
-                {line}
-              </li>
-            ))}
-          </ul>
+          <div class="flex items-center justify-between gap-3">
+            <h2 class="font-display text-lg font-semibold text-ink">{p.nom}</h2>
+            {p.url && (
+              <a href={p.url} target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-moss hover:underline">
+                Voir le site ↗
+              </a>
+            )}
+          </div>
+          <span class="mt-2 inline-flex rounded-full bg-moss-light px-3 py-1 text-xs font-medium text-moss">{p.secteur}</span>
+          <p class="mt-4 text-sm leading-relaxed text-ink-soft">{p.description}</p>
         </div>
       ))}
     </div>

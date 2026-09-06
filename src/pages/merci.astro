@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Message envoyé"
+  description="Votre message a bien été envoyé, réponse sous 24h ouvrées."
+  noindex={true}
+>
+  <section class="container-cairn flex min-h-[60vh] flex-col items-center justify-center py-24 text-center">
+    <span class="flex h-14 w-14 items-center justify-center rounded-full bg-moss-light text-moss">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M5 12.5L9.5 17L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+    <h1 class="mt-6 font-display text-3xl font-bold tracking-tight text-ink">Message bien envoyé</h1>
+    <p class="mt-4 max-w-md text-ink-soft">
+      Merci ! Vous recevez une réponse sous 24h ouvrées à l'adresse indiquée dans le formulaire.
+    </p>
+    <a href="/" class="mt-8 inline-flex items-center justify-center rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5 hover:bg-moss">
+      Retour à l'accueil
+    </a>
+  </section>
+</BaseLayout>

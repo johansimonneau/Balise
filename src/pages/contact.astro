@@ -31,31 +31,38 @@ const CONTACT_EMAIL = "johansimonneau.pro@gmail.com";
         </div>
 
         <p class="mt-8 rounded-xl border border-line bg-paper-dim px-4 py-3 text-xs text-ink-soft">
-          Le formulaire ci-contre est relié à un service d'envoi d'e-mails externe (Formspree). Si vous ne recevez pas de confirmation, écrivez directement à l'adresse ci-dessus.
+          Le formulaire ci-contre envoie directement un e-mail à {CONTACT_EMAIL}, via FormSubmit (aucun compte, aucun nom de domaine requis). À la toute première demande reçue, un e-mail de confirmation d'activation arrive dans cette boîte — il suffit de cliquer une fois pour activer l'envoi automatique. Si vous ne recevez rien, écrivez directement à l'adresse ci-dessus.
         </p>
       </div>
 
       <form
-        action="https://formspree.io/f/VOTRE_ID_FORMSPREE"
+        action={`https://formsubmit.co/${CONTACT_EMAIL}`}
         method="POST"
         class="rounded-3xl border border-line bg-white p-8"
       >
+        <input type="hidden" name="_subject" value="Nouvelle demande — Site Cairn" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value={`${Astro.site}merci`} />
+        <input type="hidden" name="Provenance" value="Formulaire de contact du site Cairn" />
+        <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+
         <div class="grid gap-5 sm:grid-cols-2">
           <div class="sm:col-span-1">
             <label for="name" class="text-sm font-medium text-ink">Nom</label>
-            <input id="name" name="name" type="text" required class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-2.5 text-sm outline-none focus:border-moss" />
+            <input id="name" name="Nom" type="text" required class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-2.5 text-sm outline-none focus:border-moss" />
           </div>
           <div class="sm:col-span-1">
             <label for="email" class="text-sm font-medium text-ink">E-mail</label>
-            <input id="email" name="email" type="email" required class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-2.5 text-sm outline-none focus:border-moss" />
+            <input id="email" name="Email" type="email" required class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-2.5 text-sm outline-none focus:border-moss" />
           </div>
           <div class="sm:col-span-2">
             <label for="activite" class="text-sm font-medium text-ink">Votre activité</label>
-            <input id="activite" name="activite" type="text" placeholder="Ex. artisan électricien, coach sportif, restaurant..." required class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-2.5 text-sm outline-none focus:border-moss" />
+            <input id="activite" name="Activité" type="text" placeholder="Ex. artisan électricien, coach sportif, restaurant..." required class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-2.5 text-sm outline-none focus:border-moss" />
           </div>
           <div class="sm:col-span-2">
             <label for="offre" class="text-sm font-medium text-ink">Offre qui vous intéresse</label>
-            <select id="offre" name="offre" class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-2.5 text-sm outline-none focus:border-moss">
+            <select id="offre" name="Offre" class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-2.5 text-sm outline-none focus:border-moss">
               <option>Pack Site Vitrine — 400€</option>
               <option>Pack Site Vitrine + Blog 10 articles — 600€</option>
               <option>Je ne sais pas encore, j'ai des questions</option>
@@ -63,7 +70,7 @@ const CONTACT_EMAIL = "johansimonneau.pro@gmail.com";
           </div>
           <div class="sm:col-span-2">
             <label for="message" class="text-sm font-medium text-ink">Votre message</label>
-            <textarea id="message" name="message" rows="5" required class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-2.5 text-sm outline-none focus:border-moss"></textarea>
+            <textarea id="message" name="Message" rows="5" required class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-2.5 text-sm outline-none focus:border-moss"></textarea>
           </div>
         </div>
         <button type="submit" class="mt-6 w-full rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5 hover:bg-moss sm:w-auto">

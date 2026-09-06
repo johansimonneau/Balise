@@ -39,7 +39,7 @@ Pour utiliser un domaine comme `cairn-web.fr` :
 ## À personnaliser avant mise en ligne commerciale
 
 - **`src/pages/mentions-legales.astro`** et **`src/pages/cgv.astro`** : remplacer les champs `[À COMPLÉTER]` (statut juridique, SIRET, adresse, registrar du nom de domaine). Une relecture par un professionnel du droit est recommandée pour les CGV.
-- **`src/pages/contact.astro`** : remplacer `action="https://formspree.io/f/VOTRE_ID_FORMSPREE"` par votre propre identifiant après création d'un compte gratuit sur [formspree.io](https://formspree.io) (ou tout autre service équivalent).
+- **`src/pages/contact.astro`** : le formulaire envoie déjà les demandes par e-mail à `johansimonneau.pro@gmail.com` via [FormSubmit](https://formsubmit.co) — aucun compte à créer, aucun nom de domaine requis. À la toute première soumission, FormSubmit envoie un e-mail d'activation à cette adresse : il faut cliquer une fois sur le lien de confirmation pour que les envois suivants partent automatiquement.
 - **`public/og-cairn.svg`** : image de partage réseaux sociaux actuellement en SVG. Pour une compatibilité maximale (Facebook, LinkedIn), exportez une version PNG 1200x630 (par exemple via Canva) et remplacez la référence dans `src/components/SEO.astro`.
 - **`src/pages/realisations.astro`** : contient des exemples de structure de site, clairement labellisés comme tels. À remplacer progressivement par de vrais projets clients, avec leur accord.
 - **`astro.config.mjs`** : le champ `site` est réglé sur `https://cairn-web.fr` à titre d'exemple — à ajuster selon le domaine réellement acheté.
