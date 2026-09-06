@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTABanner from "../components/CTABanner.astro";
+
+const points = [
+  {
+    title: "Hébergement HTTPS par défaut",
+    text: "Tous les sites livrés sont servis en HTTPS, avec certificat SSL géré automatiquement par l'infrastructure d'hébergement. Aucune connexion en clair.",
+  },
+  {
+    title: "Aucune base de données exposée",
+    text: "Les sites livrés sont des sites statiques : il n'y a pas de base de données accessible en ligne, donc pas de mot de passe ni de contenu client stocké sur un serveur exploitable par un tiers.",
+  },
+  {
+    title: "Données du formulaire de contact minimales",
+    text: "Seules les informations nécessaires pour répondre à une demande (nom, e-mail, message) sont collectées, jamais revendues, jamais utilisées à d'autres fins que le suivi commercial.",
+  },
+  {
+    title: "Code source ouvert au client",
+    text: "Le site livré vous appartient et son code peut vous être transmis intégralement : aucune dépendance cachée à un outil propriétaire fermé.",
+  },
+  {
+    title: "Relecture humaine systématique",
+    text: "Aucun contenu généré par IA n'est publié sans relecture humaine, réduisant le risque d'erreurs factuelles ou d'incohérences sur votre site.",
+  },
+  {
+    title: "Sauvegarde de l'historique",
+    text: "Chaque version du site est conservée dans un historique de code, ce qui permet de revenir à une version antérieure en cas de problème après une modification.",
+  },
+];
+---
+
+<BaseLayout
+  title="Sécurité & confidentialité des données"
+  description="Comment Cairn protège les données de ses clients et prospects : hébergement, formulaire de contact, code source, et pratiques de sécurité."
+>
+  <section class="container-cairn pt-16 pb-8">
+    <p class="text-sm font-medium uppercase tracking-wide text-moss">Confiance</p>
+    <h1 class="mt-3 max-w-2xl font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+      Sécurité et confidentialité, sans jargon technique
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg text-ink-soft">
+      Confier son site et ses données à un prestataire, ça demande de la confiance. Voici, concrètement, comment vos informations et celles de vos futurs visiteurs sont traitées.
+    </p>
+  </section>
+
+  <section class="container-cairn py-8 pb-24">
+    <div class="grid gap-6 sm:grid-cols-2">
+      {points.map((point) => (
+        <div class="rounded-2xl border border-line bg-white p-6">
+          <h2 class="font-display font-semibold text-ink">{point.title}</h2>
+          <p class="mt-2 text-sm leading-relaxed text-ink-soft">{point.text}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-8 rounded-2xl border border-line bg-paper-dim p-6 text-sm text-ink-soft">
+      Pour le détail complet du traitement des données personnelles, consultez la <a href="/politique-de-confidentialite" class="font-medium text-moss underline underline-offset-2">politique de confidentialité</a> et la <a href="/cookies" class="font-medium text-moss underline underline-offset-2">politique de cookies</a>.
+    </div>
+  </section>
+
+  <CTABanner />
+</BaseLayout>

@@ -1,0 +1,97 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FAQAccordion from "../components/FAQAccordion.astro";
+import CTABanner from "../components/CTABanner.astro";
+
+const faqs = [
+  {
+    question: "Le site est-il vraiment écrit entièrement par une IA ?",
+    answer:
+      "L'IA rédige une première version de chaque page à partir des informations que vous fournissez sur votre activité. Ensuite, une relecture humaine systématique corrige, ajuste le ton et vérifie l'exactitude avant la mise en ligne. Vous ne recevez jamais un texte généré sans contrôle.",
+  },
+  {
+    question: "Pourquoi 20 à 30 pages, et pas un site plus simple ?",
+    answer:
+      "Un site à 4-5 pages répond rarement à toutes les questions qu'un visiteur se pose. En détaillant chaque service, chaque zone d'intervention ou chaque cas d'usage sur sa propre page, le site couvre davantage de recherches Google et rassure mieux le visiteur avant qu'il ne vous contacte.",
+  },
+  {
+    question: "Combien de temps pour avoir mon site en ligne ?",
+    answer:
+      "En général 7 à 10 jours ouvrés après réception de vos informations, en comptant une étape de validation de votre part. Le détail exact est expliqué sur la page 'Comment ça marche'.",
+  },
+  {
+    question: "Le prix de 400€ est-il vraiment définitif ?",
+    answer:
+      "Oui, pour le pack Site Vitrine standard tel que décrit sur la page tarifs. Si votre projet sort du cadre (fonctionnalités complexes, plus de 30 pages, contenus juridiques spécifiques), un complément vous est proposé par écrit avant tout engagement — jamais après coup.",
+  },
+  {
+    question: "Qu'est-ce qui est inclus dans l'option Blog + 10 articles ?",
+    answer:
+      "Un blog intégré à votre site avec 10 articles de 600 à 900 mots, rédigés pour votre secteur et optimisés pour le référencement. C'est la manière la plus simple de commencer à apparaître sur des recherches précises dès la mise en ligne.",
+  },
+  {
+    question: "Le site m'appartient-il complètement ?",
+    answer:
+      "Oui. Le nom de domaine est enregistré à votre nom et le code du site vous appartient. Vous n'êtes lié à aucun abonnement obligatoire après la livraison.",
+  },
+  {
+    question: "Que se passe-t-il si je veux modifier une page après la livraison ?",
+    answer:
+      "Vous recevez un guide simple pour les modifications de base (texte, coordonnées, photos). Pour des changements plus profonds, vous pouvez nous solliciter ponctuellement ou choisir l'option de suivi mensuel présentée sur la page tarifs — sans obligation.",
+  },
+  {
+    question: "Puis-je vendre en ligne avec ce pack ?",
+    answer:
+      "Le pack Site Vitrine est pensé pour présenter votre activité et générer des demandes de contact, pas pour de la vente en ligne avec paiement intégré. Ce besoin peut être étudié en option, sur devis séparé.",
+  },
+  {
+    question: "Travaillez-vous avec tous les secteurs d'activité ?",
+    answer:
+      "La grande majorité, oui : artisans, professions libérales, commerces locaux, indépendants, associations. Certains secteurs très réglementés (santé, finance, droit) peuvent nécessiter une validation de contenu par un professionnel habilité avant publication — nous vous le signalons dès l'échange initial si c'est votre cas.",
+  },
+  {
+    question: "Comment se passe le paiement ?",
+    answer:
+      "Un devis écrit est envoyé avant tout règlement. Le paiement peut se faire en une fois ou en deux fois (acompte à la commande, solde à la livraison), sur simple demande.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+---
+
+<BaseLayout
+  title="FAQ — questions fréquentes sur les sites Cairn"
+  description="Délais, prix, propriété du site, secteurs accompagnés : toutes les réponses aux questions les plus posées avant de commander un site Cairn."
+  jsonLd={jsonLd}
+>
+  <section class="container-cairn pt-16 pb-8">
+    <p class="text-sm font-medium uppercase tracking-wide text-moss">FAQ</p>
+    <h1 class="mt-3 max-w-2xl font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+      Questions fréquentes
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg text-ink-soft">
+      Si votre question n'est pas ici, elle a probablement une réponse simple — écrivez-nous directement.
+    </p>
+  </section>
+
+  <section class="container-cairn py-8 pb-24">
+    <FAQAccordion items={faqs} />
+  </section>
+
+  <CTABanner
+    title="Une question qui n'est pas listée ici ?"
+    description="Écrivez-nous, on répond sous 24h ouvrées, sans script commercial."
+    cta="Poser ma question"
+  />
+</BaseLayout>

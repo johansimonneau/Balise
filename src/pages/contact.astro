@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const CONTACT_EMAIL = "johansimonneau.pro@gmail.com";
+---
+
+<BaseLayout
+  title="Contact — parlez-nous de votre projet de site"
+  description="Décrivez votre activité et vos besoins : vous recevez un devis clair pour votre site vitrine Cairn sous 24h."
+>
+  <section class="container-cairn py-16 sm:py-24">
+    <div class="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
+      <div>
+        <p class="text-sm font-medium uppercase tracking-wide text-moss">Contact</p>
+        <h1 class="mt-3 font-display text-4xl font-bold tracking-tight text-ink">
+          Parlons de votre site
+        </h1>
+        <p class="mt-6 text-ink-soft">
+          Décrivez votre activité en quelques lignes : votre métier, votre zone géographique, et ce que vous aimeriez qu'un visiteur comprenne en 10 secondes sur votre site. Vous recevez une réponse et, si votre besoin correspond au pack, un devis chiffré sous 24h ouvrées.
+        </p>
+
+        <div class="mt-8 space-y-4 text-sm">
+          <div class="flex items-center gap-3">
+            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-moss-light text-moss">✉</span>
+            <a href={`mailto:${CONTACT_EMAIL}`} class="font-medium text-ink hover:text-moss">{CONTACT_EMAIL}</a>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-moss-light text-moss">⏱</span>
+            <span class="text-ink-soft">Réponse sous 24h ouvrées</span>
+          </div>
+        </div>
+
+        <p class="mt-8 rounded-xl border border-line bg-paper-dim px-4 py-3 text-xs text-ink-soft">
+          Le formulaire ci-contre est relié à un service d'envoi d'e-mails externe (Formspree). Si vous ne recevez pas de confirmation, écrivez directement à l'adresse ci-dessus.
+        </p>
+      </div>
+
+      <form
+        action="https://formspree.io/f/VOTRE_ID_FORMSPREE"
+        method="POST"
+        class="rounded-3xl border border-line bg-white p-8"
+      >
+        <div class="grid gap-5 sm:grid-cols-2">
+          <div class="sm:col-span-1">
+            <label for="name" class="text-sm font-medium text-ink">Nom</label>
+            <input id="name" name="name" type="text" required class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-2.5 text-sm outline-none focus:border-moss" />
+          </div>
+          <div class="sm:col-span-1">
+            <label for="email" class="text-sm font-medium text-ink">E-mail</label>
+            <input id="email" name="email" type="email" required class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-2.5 text-sm outline-none focus:border-moss" />
+          </div>
+          <div class="sm:col-span-2">
+            <label for="activite" class="text-sm font-medium text-ink">Votre activité</label>
+            <input id="activite" name="activite" type="text" placeholder="Ex. artisan électricien, coach sportif, restaurant..." required class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-2.5 text-sm outline-none focus:border-moss" />
+          </div>
+          <div class="sm:col-span-2">
+            <label for="offre" class="text-sm font-medium text-ink">Offre qui vous intéresse</label>
+            <select id="offre" name="offre" class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-2.5 text-sm outline-none focus:border-moss">
+              <option>Pack Site Vitrine — 400€</option>
+              <option>Pack Site Vitrine + Blog 10 articles — 600€</option>
+              <option>Je ne sais pas encore, j'ai des questions</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="message" class="text-sm font-medium text-ink">Votre message</label>
+            <textarea id="message" name="message" rows="5" required class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-2.5 text-sm outline-none focus:border-moss"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="mt-6 w-full rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5 hover:bg-moss sm:w-auto">
+          Envoyer ma demande
+        </button>
+      </form>
+    </div>
+  </section>
+</BaseLayout>

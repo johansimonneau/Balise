@@ -1,0 +1,137 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PricingCard from "../components/PricingCard.astro";
+import CTABanner from "../components/CTABanner.astro";
+
+const alaCarte = [
+  { item: "Article de blog supplémentaire (600-900 mots, optimisé SEO)", price: "15 € / article" },
+  { item: "Identité visuelle simple (logo + palette de couleurs)", price: "90 €" },
+  { item: "Nom de domaine personnalisé (.fr, .com…)", price: "prix réel du registrar, ~12-15 €/an" },
+  { item: "Refonte d'un site existant vers le pack Cairn", price: "à partir de 250 €, sur devis" },
+  { item: "Page supplémentaire au-delà de 30 pages", price: "20 € / page" },
+  { item: "Suivi & petites retouches mensuelles (sans engagement)", price: "29 € / mois" },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Création de site internet vitrine",
+  provider: { "@type": "Organization", name: "Cairn" },
+  areaServed: "FR",
+  offers: [
+    {
+      "@type": "Offer",
+      name: "Pack Site Vitrine",
+      price: "400",
+      priceCurrency: "EUR",
+      description: "Site vitrine de 20 à 30 pages, rédigé avec l'IA et relu par un humain.",
+    },
+    {
+      "@type": "Offer",
+      name: "Option Blog + 10 articles",
+      price: "200",
+      priceCurrency: "EUR",
+      description: "Blog intégré avec 10 articles optimisés SEO.",
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Tarifs Cairn — Site vitrine 400€, Blog + 10 articles 200€"
+  description="Grille tarifaire transparente : Pack Site Vitrine 20-30 pages à 400€ net, option Blog + 10 articles à 200€, et toutes les options à la carte affichées sans surprise."
+  jsonLd={jsonLd}
+>
+  <section class="container-cairn pt-16 pb-12 text-center">
+    <p class="text-sm font-medium uppercase tracking-wide text-moss">Tarifs</p>
+    <h1 class="mx-auto mt-3 max-w-2xl font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+      Une grille simple. Le prix annoncé est le prix payé.
+    </h1>
+    <p class="mx-auto mt-6 max-w-xl text-lg text-ink-soft">
+      Pas d'abonnement obligatoire, pas de ligne cachée sur la facture. Deux offres principales, et des options à la carte affichées ici, en euros, sans "sur devis" par défaut.
+    </p>
+  </section>
+
+  <section class="container-cairn py-8">
+    <div class="grid gap-8 md:grid-cols-2">
+      <PricingCard
+        name="Pack Site Vitrine"
+        price="400 €"
+        description="Le socle : un site complet de 20 à 30 pages pour exister sérieusement en ligne."
+        features={[
+          "20 à 30 pages rédigées pour votre activité",
+          "Design responsive moderne, adapté à votre image",
+          "Structure SEO de base (titres, méta, sitemap, maillage interne)",
+          "Formulaire de contact fonctionnel",
+          "Hébergement + nom de domaine configurés",
+          "Mise en ligne sous 5 à 10 jours ouvrés",
+          "Une relecture humaine complète avant publication",
+        ]}
+        badge="Le plus choisi"
+        highlight
+      />
+      <PricingCard
+        name="Option Blog + 10 articles"
+        price="+ 200 €"
+        priceNote="en complément du pack Site Vitrine"
+        description="Pour commencer à exister sur des recherches précises dès la mise en ligne."
+        features={[
+          "Blog intégré à votre site, dans le même design",
+          "10 articles de 600 à 900 mots rédigés pour votre secteur",
+          "Optimisation SEO de chaque article (titre, méta, structure)",
+          "Maillage vers vos pages services pour renforcer le référencement",
+          "Suggestions de sujets pour la suite, une fois les 10 articles publiés",
+        ]}
+        cta="Ajouter le blog"
+      />
+    </div>
+  </section>
+
+  <section class="container-cairn py-16">
+    <h2 class="font-display text-2xl font-bold text-ink">Les options à la carte</h2>
+    <p class="mt-2 max-w-2xl text-sm text-ink-soft">
+      Tout ce qui peut s'ajouter au pack de base, affiché avec un prix ou une fourchette claire — jamais "nous contacter" quand un chiffre peut être donné.
+    </p>
+    <div class="mt-8 overflow-hidden rounded-2xl border border-line bg-white">
+      <table class="w-full text-left text-sm">
+        <thead class="border-b border-line bg-paper-dim">
+          <tr>
+            <th class="px-6 py-4 font-display font-semibold text-ink">Option</th>
+            <th class="px-6 py-4 font-display font-semibold text-ink">Prix</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-line">
+          {alaCarte.map((row) => (
+            <tr>
+              <td class="px-6 py-4 text-ink-soft">{row.item}</td>
+              <td class="whitespace-nowrap px-6 py-4 font-medium text-ink">{row.price}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="container-cairn py-8 pb-24">
+    <div class="grid gap-6 sm:grid-cols-3">
+      <div class="rounded-2xl border border-line bg-white p-6">
+        <h3 class="font-display font-semibold text-ink">Aucun abonnement obligatoire</h3>
+        <p class="mt-2 text-sm text-ink-soft">Le pack est un paiement unique. Le site vous appartient, hébergement et nom de domaine compris.</p>
+      </div>
+      <div class="rounded-2xl border border-line bg-white p-6">
+        <h3 class="font-display font-semibold text-ink">Devis écrit avant tout paiement</h3>
+        <p class="mt-2 text-sm text-ink-soft">Vous recevez le détail exact de ce qui est prévu avant de régler quoi que ce soit.</p>
+      </div>
+      <div class="rounded-2xl border border-line bg-white p-6">
+        <h3 class="font-display font-semibold text-ink">Paiement en deux fois possible</h3>
+        <p class="mt-2 text-sm text-ink-soft">Un acompte à la commande, le solde à la livraison — sur simple demande.</p>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner
+    title="Une question sur un prix, une option ?"
+    description="Envoyez un message avec votre activité : vous recevez un devis clair sous 24h, sans engagement."
+    cta="Demander un devis"
+  />
+</BaseLayout>

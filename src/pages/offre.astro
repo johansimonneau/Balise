@@ -1,0 +1,99 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTABanner from "../components/CTABanner.astro";
+
+const inclus = [
+  {
+    title: "Jusqu'à 20-30 pages",
+    text: "Accueil, présentation, services ou produits détaillés page par page, zone d'intervention, réalisations, contact, FAQ — assez de pages pour couvrir chaque question qu'un client se pose avant d'appeler.",
+  },
+  {
+    title: "Contenu rédigé, pas généré au hasard",
+    text: "L'IA rédige une première version de chaque page à partir de vos informations réelles (services, ton, zone géographique). Rien n'est copié-collé d'un modèle générique : chaque site part de votre activité.",
+  },
+  {
+    title: "Structure pensée SEO",
+    text: "Titres hiérarchisés, balises méta, maillage interne entre les pages, sitemap et données structurées : les fondations techniques du référencement sont posées dès la livraison.",
+  },
+  {
+    title: "Design responsive 2026",
+    text: "Un site lisible et rapide sur mobile comme sur ordinateur, sans thème générique daté. Charte graphique adaptée à votre activité et vos couleurs.",
+  },
+  {
+    title: "Formulaire de contact fonctionnel",
+    text: "Vos prospects vous écrivent directement depuis le site, sans passer par un lien externe.",
+  },
+  {
+    title: "Hébergement et nom de domaine",
+    text: "Mise en ligne sur une infrastructure fiable, avec accompagnement pour le choix et la configuration de votre nom de domaine.",
+  },
+];
+
+const nonInclus = [
+  "Rédaction de contenus juridiques spécifiques (à valider par un professionnel du droit si votre secteur l'exige)",
+  "Prises de vue photo/vidéo professionnelles (nous pouvons vous orienter vers des partenaires)",
+  "Développement de fonctionnalités complexes (paiement en ligne, espace client, réservation avancée) — possible en option sur devis",
+  "Maintenance mensuelle au-delà de la livraison (proposée en option, jamais imposée)",
+];
+---
+
+<BaseLayout
+  title="L'offre Cairn — site vitrine 20-30 pages rédigé par l'IA"
+  description="Le détail de l'offre Cairn : ce qui est inclus, ce qui ne l'est pas, et comment l'IA construit un site vitrine complet et cohérent pour votre activité."
+>
+  <section class="container-cairn pt-16 pb-12">
+    <p class="text-sm font-medium uppercase tracking-wide text-moss">L'offre</p>
+    <h1 class="mt-3 max-w-3xl font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+      Un site complet, pas une simple carte de visite en ligne
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg text-ink-soft">
+      Beaucoup de petites entreprises n'ont qu'une page Facebook ou une fiche Google. C'est un bon début, mais ça ne suffit plus pour être trouvé, compris et choisi. Cairn construit un vrai site, structuré comme celui d'une entreprise établie, sans le budget ni les délais d'une agence classique.
+    </p>
+  </section>
+
+  <section class="container-cairn py-8">
+    <h2 class="font-display text-2xl font-bold text-ink">Ce qui est inclus dans le pack Site Vitrine</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-2">
+      {inclus.map((item) => (
+        <div class="rounded-2xl border border-line bg-white p-6">
+          <h3 class="font-display font-semibold text-ink">{item.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink-soft">{item.text}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="container-cairn py-16">
+    <div class="rounded-3xl border border-line bg-paper-dim p-8 sm:p-10">
+      <h2 class="font-display text-2xl font-bold text-ink">Ce qui n'est pas inclus (et pourquoi on préfère le dire maintenant)</h2>
+      <p class="mt-3 max-w-2xl text-sm text-ink-soft">
+        Une offre transparente, c'est aussi une offre qui dit clairement ses limites. Voici ce qui sort du pack de base — toujours possible en option, jamais caché dans les petites lignes.
+      </p>
+      <ul class="mt-6 space-y-3">
+        {nonInclus.map((item) => (
+          <li class="flex items-start gap-3 text-sm text-ink-soft">
+            <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-clay"></span>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="container-cairn py-8 pb-24">
+    <h2 class="font-display text-2xl font-bold text-ink">Pourquoi l'IA, et pourquoi ce n'est pas "au rabais"</h2>
+    <div class="prose-cairn mt-6">
+      <p>
+        L'intelligence artificielle change ce qui est possible pour 400€. Avant, ce budget permettait au mieux un site une page ou un modèle générique. Aujourd'hui, elle permet de générer rapidement une architecture complète, une première rédaction pour chaque page et une cohérence entre elles — un travail qui, fait entièrement à la main, prendrait des semaines.
+      </p>
+      <p>
+        Mais l'IA seule ne suffit pas : elle peut mal interpréter une consigne, répéter une tournure, ou manquer une nuance propre à votre métier. C'est pourquoi chaque site passe par une relecture humaine avant mise en ligne : cohérence du ton, exactitude des informations, vérification technique. L'IA accélère la production, l'humain garantit la qualité.
+      </p>
+      <p>
+        Résultat : un site qui aurait coûté plusieurs milliers d'euros en agence traditionnelle, livré à un prix accessible à une petite structure, sans compromis sur la structure ni sur le fond.
+      </p>
+    </div>
+  </section>
+
+  <CTABanner />
+</BaseLayout>

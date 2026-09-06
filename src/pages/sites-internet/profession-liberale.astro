@@ -1,0 +1,39 @@
+---
+import NicheLanding from "../../components/NicheLanding.astro";
+---
+
+<NicheLanding
+  metier="profession libérale"
+  path="/sites-internet/profession-liberale"
+  metaTitle="Site internet pour profession libérale — 400€, 20-30 pages"
+  metaDescription="Cairn crée le site internet des professions libérales : consultants, thérapeutes, professions du chiffre et du conseil. Structure claire, rassurante, dès 400€."
+  heroKicker="Pour les professions libérales"
+  heroTitle="Un site qui inspire confiance avant le premier rendez-vous"
+  heroText="Consultant, thérapeute, professionnel du conseil ou du chiffre : votre activité repose sur la confiance. Un site clair, qui explique votre approche et vos domaines d'intervention, rassure un prospect avant même l'échange téléphonique."
+  painPoints={[
+    { title: "\"Mon activité est difficile à expliquer simplement\"", text: "Nous transformons votre discours d'expert en pages claires, compréhensibles par quelqu'un qui découvre votre domaine." },
+    { title: "\"Je ne veux pas d'un site qui fait 'usine à conseil'\"", text: "Le ton et la structure s'adaptent à votre pratique réelle, pas à un modèle générique de cabinet de conseil." },
+    { title: "\"Je dois respecter certaines contraintes déontologiques\"", text: "Nous vous signalons en amont si votre secteur nécessite une validation de contenu par votre ordre ou une instance professionnelle avant publication." },
+  ]}
+  pagesNote="Un exemple pour une activité de conseil ou d'accompagnement individuel, à adapter selon votre spécialité et vos contraintes propres."
+  pages={[
+    "Accueil",
+    "Domaines d'intervention (une page par spécialité)",
+    "Méthode / approche de travail",
+    "À propos et parcours",
+    "Modalités (tarifs, durée, déroulé d'un premier échange)",
+    "Prise de rendez-vous",
+    "FAQ",
+    "Mentions légales et informations réglementaires",
+  ]}
+  faq={[
+    { question: "Puis-je intégrer un système de prise de rendez-vous en ligne ?", answer: "Le pack de base inclut un formulaire de contact ; un lien vers votre outil de prise de rendez-vous existant (Calendly ou équivalent) peut être intégré directement sur le site." },
+    { question: "Le contenu respecte-t-il les règles de ma profession réglementée ?", answer: "Nous rédigeons à partir de vos informations, mais la validation finale d'un contenu soumis à des règles déontologiques (avocats, professions de santé...) reste de votre responsabilité avant publication." },
+    { question: "Puis-je afficher mes diplômes et certifications ?", answer: "Oui, une page dédiée à votre parcours et vos qualifications est généralement incluse dans la structure du site." },
+  ]}
+  testimonial={{
+    quote: "J'avais du mal à expliquer ce que je fais en quelques phrases. Le site a clarifié mon propre discours autant que celui destiné à mes clients.",
+    name: "Nadia T.",
+    role: "Consultante en organisation",
+  }}
+/>

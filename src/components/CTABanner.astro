@@ -1,0 +1,29 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  cta?: string;
+  href?: string;
+}
+const {
+  title = "Prêt à poser la première pierre de votre site ?",
+  description = "Réponse sous 24h, mise en ligne en quelques jours. Sans jargon, sans mauvaise surprise sur la facture.",
+  cta = "Démarrer mon projet",
+  href = "/contact",
+} = Astro.props;
+---
+
+<section class="container-cairn my-24">
+  <div class="grain relative overflow-hidden rounded-3xl bg-ink px-8 py-16 text-center sm:px-16">
+    <div class="relative mx-auto max-w-xl">
+      <h2 class="font-display text-2xl font-semibold text-paper sm:text-3xl">{title}</h2>
+      <p class="mt-4 text-paper/70">{description}</p>
+      <a
+        href={href}
+        class="mt-8 inline-flex items-center justify-center rounded-full bg-paper px-6 py-3.5 text-sm font-semibold text-ink transition-transform hover:-translate-y-0.5 hover:bg-clay hover:text-white"
+      >
+        {cta}
+      </a>
+    </div>
+  </div>
+</section>

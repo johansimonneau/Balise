@@ -1,0 +1,39 @@
+---
+import NicheLanding from "../../components/NicheLanding.astro";
+---
+
+<NicheLanding
+  metier="association"
+  path="/sites-internet/association"
+  metaTitle="Site internet pour association — 400€, 20-30 pages"
+  metaDescription="Cairn crée le site internet de votre association : présentation, activités, adhésion, bénévolat, dons. Un site clair pour toucher membres et bénévoles, dès 400€."
+  heroKicker="Pour les associations"
+  heroTitle="Un site qui aide à trouver des membres, pas seulement à exister"
+  heroText="Une association vit de ses membres, de ses bénévoles et parfois de ses dons. Un site qui explique clairement votre mission, vos activités et comment s'impliquer facilite ces trois démarches, sans dépendre uniquement du bouche-à-oreille."
+  painPoints={[
+    { title: "\"On n'a pas de budget dédié\"", text: "Le pack à prix fixe est pensé pour rester accessible à une structure associative, sans coûts cachés qui s'ajoutent en cours de route." },
+    { title: "\"Personne dans l'asso ne sait faire un site\"", text: "Aucune compétence technique n'est nécessaire de votre côté : vous décrivez votre association, la structure et la rédaction sont prises en charge." },
+    { title: "\"On veut donner envie de nous rejoindre, pas juste informer\"", text: "Une page dédiée à l'adhésion et au bénévolat, avec un appel à l'action clair, remplace une simple liste d'informations administratives." },
+  ]}
+  pagesNote="Un exemple pour une association culturelle, sportive ou de solidarité, adaptable à votre objet social."
+  pages={[
+    "Accueil et mission",
+    "Nos activités (une page par activité principale)",
+    "Adhérer / devenir bénévole",
+    "Faire un don",
+    "Événements à venir",
+    "Notre équipe et notre histoire",
+    "Actualités / blog associatif",
+    "Contact",
+  ]}
+  faq={[
+    { question: "Le site peut-il intégrer une plateforme de don en ligne ?", answer: "Un lien vers votre plateforme de don existante (HelloAsso ou équivalent) peut être intégré directement, en complément du pack de base." },
+    { question: "Peut-on gérer les inscriptions à nos événements depuis le site ?", answer: "Le formulaire de contact standard peut servir de première étape ; une billetterie ou un système d'inscription plus poussé peut être étudié en option." },
+    { question: "Le tarif est-il adapté à une petite association sans gros budget ?", answer: "Oui, c'est justement l'un des objectifs de cette offre : proposer un site complet à un tarif accessible aux structures associatives comme aux petites entreprises." },
+  ]}
+  testimonial={{
+    quote: "On avait juste une page Facebook peu active. Le site nous a permis de mieux expliquer nos actions et on a reçu plus de demandes de bénévolat en un mois qu'en un an avant ça.",
+    name: "Marc D.",
+    role: "Président d'une association culturelle locale",
+  }}
+/>

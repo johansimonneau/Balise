@@ -1,0 +1,39 @@
+---
+import NicheLanding from "../../components/NicheLanding.astro";
+---
+
+<NicheLanding
+  metier="coach ou indépendant"
+  path="/sites-internet/coach-independant"
+  metaTitle="Site internet pour coach et indépendant — 400€, 20-30 pages"
+  metaDescription="Cairn crée le site internet des coachs et indépendants : coaching sportif, développement personnel, freelances du service. Un site qui structure votre offre, dès 400€."
+  heroKicker="Pour les coachs et indépendants"
+  heroTitle="Un site qui rend votre offre lisible, enfin"
+  heroText="Coach sportif, coach en développement personnel, freelance du service : votre activité vit souvent sur Instagram, mais un client qui hésite finit toujours par chercher un site pour vérifier votre sérieux et comprendre votre offre en détail."
+  painPoints={[
+    { title: "\"Mon offre change souvent, un site a-t-il un sens ?\"", text: "La structure sépare vos formules actuelles du reste du contenu (méthode, à propos), ce qui rend les mises à jour ponctuelles simples à faire vous-même." },
+    { title: "\"J'ai déjà Instagram, pourquoi un site ?\"", text: "Instagram ne remonte pas sur Google. Un site capte les recherches actives ('coach sportif à domicile [ville]') qu'un compte Instagram ne peut pas couvrir." },
+    { title: "\"Je ne sais pas comment présenter mes différentes prestations\"", text: "Chaque type d'accompagnement peut avoir sa propre page, avec son propre tarif et son propre déroulé, sans tout mélanger sur une seule page confuse." },
+  ]}
+  pagesNote="Un exemple pour un coaching individuel avec plusieurs formats d'accompagnement, adaptable à votre discipline."
+  pages={[
+    "Accueil",
+    "Une page par formule d'accompagnement",
+    "Méthode",
+    "À propos et parcours",
+    "Témoignages",
+    "Blog (option incluse)",
+    "Réserver un premier appel",
+    "FAQ",
+  ]}
+  faq={[
+    { question: "Puis-je relier mon compte Instagram et mes réseaux au site ?", answer: "Oui, les liens vers vos réseaux sociaux sont intégrés au site, qui devient un point central renvoyant vers vos contenus existants." },
+    { question: "Le site peut-il évoluer si je change mes offres dans six mois ?", answer: "Oui : les pages de formules sont conçues pour être modifiées facilement, avec le guide fourni, ou avec notre aide ponctuelle si besoin." },
+    { question: "Est-ce que je peux ajouter un système de réservation d'appel ?", answer: "Un lien vers votre outil de prise de rendez-vous (Calendly ou équivalent) s'intègre facilement à la page dédiée à la prise de contact." },
+  ]}
+  testimonial={{
+    quote: "Je repoussais mon site depuis deux ans. Là, en une semaine j'avais quelque chose de propre, avec des vraies pages sur mes accompagnements.",
+    name: "Sarah M.",
+    role: "Coach en reconversion professionnelle",
+  }}
+/>

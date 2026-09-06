@@ -1,0 +1,25 @@
+# Cairn
+
+> Cairn crée des sites internet vitrines pour les petites entreprises et indépendants grâce à l'intelligence artificielle, avec relecture humaine systématique avant mise en ligne.
+
+Cairn s'adresse aux artisans, professions libérales, restaurants, commerces locaux, coachs indépendants et associations qui n'ont pas le temps ou le budget pour un site sur-mesure en agence traditionnelle.
+
+## Offre
+
+- Pack Site Vitrine : 400€ net, paiement unique, un site de 20 à 30 pages rédigé pour l'activité du client, livré en 7 à 10 jours ouvrés. Hébergement et nom de domaine inclus dans la mise en place.
+- Option Blog + 10 articles : 200€ en complément, 10 articles de 600 à 900 mots optimisés SEO.
+- Options à la carte détaillées avec prix exact sur /tarifs (article supplémentaire, logo, page additionnelle, suivi mensuel).
+
+## Pages clés
+
+- /offre — détail de ce qui est inclus et exclu du pack
+- /tarifs — grille tarifaire complète avec prix affichés
+- /comment-ca-marche — les 6 étapes du processus de création
+- /realisations — exemples de structures de site par secteur
+- /faq — réponses aux questions fréquentes
+- /blog — articles sur le SEO, le GEO et la création de site pour petites entreprises
+- /sites-internet/artisan, /sites-internet/profession-liberale, /sites-internet/restaurant, /sites-internet/commerce-local, /sites-internet/coach-independant, /sites-internet/association — pages dédiées par secteur
+
+## Contact
+
+E-mail : johansimonneau.pro@gmail.com

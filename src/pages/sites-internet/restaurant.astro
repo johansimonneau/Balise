@@ -1,0 +1,39 @@
+---
+import NicheLanding from "../../components/NicheLanding.astro";
+---
+
+<NicheLanding
+  metier="restaurant"
+  path="/sites-internet/restaurant"
+  metaTitle="Site internet pour restaurant — 400€, 20-30 pages"
+  metaDescription="Cairn crée le site internet de votre restaurant : carte, menu du midi, réservation, événements privés. Un site qui donne envie de réserver, dès 400€."
+  heroKicker="Pour les restaurants"
+  heroTitle="Un site qui donne envie de réserver, pas juste une carte en PDF"
+  heroText="Un restaurant se choisit autant avec les yeux qu'avec l'estomac. Un site qui présente votre carte, votre ambiance et vos horaires à jour évite les appels pour des questions basiques et remplit votre salle aux heures creuses."
+  painPoints={[
+    { title: "\"Ma carte n'est jamais à jour sur internet\"", text: "La structure du site sépare clairement carte, menu du jour et événements, pour que chaque section reste facile à mettre à jour vous-même par la suite." },
+    { title: "\"Les clients m'appellent pour des questions déjà sur ma page Facebook\"", text: "Horaires, allergènes, capacité d'accueil pour un groupe : ces informations trouvent leur page dédiée, accessible sans avoir à décrocher." },
+    { title: "\"Je n'ai pas de photos professionnelles\"", text: "Nous pouvons travailler avec vos photos actuelles et vous orienter vers des partenaires pour un shooting si vous souhaitez investir davantage plus tard." },
+  ]}
+  pagesNote="Un exemple pour un restaurant de quartier avec un menu du midi et des événements privés ponctuels."
+  pages={[
+    "Accueil",
+    "Carte complète",
+    "Menu du midi / formules",
+    "Événements privés et groupes",
+    "Galerie photo",
+    "Avis clients",
+    "Réservation",
+    "Horaires et accès",
+  ]}
+  faq={[
+    { question: "Puis-je intégrer un système de réservation en ligne ?", answer: "Un lien vers votre système de réservation existant (LaFourchette, Zenchef ou équivalent) peut être intégré directement sur le site, en complément du formulaire de contact standard." },
+    { question: "Comment je mets à jour ma carte moi-même ensuite ?", answer: "Un guide simple est fourni pour les modifications de texte courantes (carte, horaires), sans compétence technique nécessaire." },
+    { question: "Le site affiche-t-il bien sur mobile au moment où un client cherche 'restaurant près de moi' ?", answer: "Oui, le design est pensé mobile en priorité, puisque la majorité des recherches de restaurant à proximité se font depuis un téléphone." },
+  ]}
+  testimonial={{
+    quote: "On recevait trois appels par jour juste pour connaître nos horaires. Le site a réglé ça, et en plus il donne vraiment envie de venir.",
+    name: "Élodie R.",
+    role: "Gérante d'un restaurant de quartier",
+  }}
+/>

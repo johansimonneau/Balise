@@ -1,0 +1,39 @@
+---
+import NicheLanding from "../../components/NicheLanding.astro";
+---
+
+<NicheLanding
+  metier="artisan"
+  path="/sites-internet/artisan"
+  metaTitle="Site internet pour artisan — 400€, 20-30 pages"
+  metaDescription="Cairn crée le site internet de votre entreprise artisanale : plomberie, électricité, rénovation, menuiserie... Structure par métier et zone d'intervention, dès 400€."
+  heroKicker="Pour les artisans"
+  heroTitle="Un site qui décroche le téléphone à votre place"
+  heroText="Plombier, électricien, menuisier, peintre, couvreur : vos clients cherchent d'abord sur Google avant d'appeler. Un site qui détaille chaque prestation et votre zone d'intervention transforme ces recherches en appels, même le week-end."
+  painPoints={[
+    { title: "\"Je n'ai pas le temps\"", text: "Entre les chantiers et les devis, écrire un site passe toujours après. Ici, c'est nous qui rédigeons à partir de ce que vous nous dites en 20 minutes." },
+    { title: "\"Mes concurrents ont un site, pas moi\"", text: "Un client hésitant compare rarement deux artisans identiques : il choisit souvent celui qui le rassure le plus vite en ligne." },
+    { title: "\"Je ne sais pas quoi écrire\"", text: "Vous n'avez pas à rédiger : vous décrivez votre métier avec vos mots, la structure et la rédaction sont prises en charge." },
+  ]}
+  pagesNote="Un exemple représentatif pour une entreprise artisanale du bâtiment, adaptable à votre corps de métier exact."
+  pages={[
+    "Accueil",
+    "Page par prestation (ex. rénovation, dépannage, installation)",
+    "Zone d'intervention (communes desservies)",
+    "Réalisations avec photos avant/après",
+    "Devis gratuit",
+    "Urgences / interventions rapides",
+    "FAQ (délais, prix, garanties)",
+    "Contact",
+  ]}
+  faq={[
+    { question: "Le site peut-il gérer les demandes de devis en urgence ?", answer: "Oui : le formulaire de contact peut être complété d'un numéro de téléphone mis en avant pour les demandes urgentes, avec un délai de réponse annoncé clairement." },
+    { question: "Puis-je afficher mes certifications et garanties (décennale, RGE...) ?", answer: "Oui, ces éléments sont intégrés dans les pages concernées : ce sont souvent des critères déterminants pour un client qui hésite entre plusieurs artisans." },
+    { question: "Et si je travaille sur plusieurs corps de métier ?", answer: "Chaque activité peut avoir sa propre page dédiée, avec son propre contenu — c'est justement l'intérêt d'un site de 20 à 30 pages plutôt que d'une seule page généraliste." },
+  ]}
+  testimonial={{
+    quote: "Avant, je donnais mon numéro sur Le Bon Coin. Maintenant j'ai un vrai site avec mes réalisations, et les clients arrivent déjà convaincus quand ils m'appellent.",
+    name: "Karim B.",
+    role: "Artisan plombier-chauffagiste",
+  }}
+/>
