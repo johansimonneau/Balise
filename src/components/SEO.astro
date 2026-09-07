@@ -44,5 +44,5 @@ const jsonLdList = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 <meta name="twitter:image" content={`${site}${image}`} />
 
 {jsonLdList.map((entry) => (
-  <script type="application/ld+json" set:html={JSON.stringify(entry)} />
+  <script type="application/ld+json" set:html={JSON.stringify(entry).replace(/</g, "\\u003c")} />
 ))}
