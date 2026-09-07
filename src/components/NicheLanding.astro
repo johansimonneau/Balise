@@ -64,9 +64,9 @@ const jsonLd = [
 ---
 
 <BaseLayout title={metaTitle} description={metaDescription} jsonLd={jsonLd}>
-  <section class="container-balise pt-16 pb-12">
+  <section class="reveal container-balise pt-16 pb-12">
     <p class="text-sm font-medium uppercase tracking-wide text-signal">{heroKicker}</p>
-    <h1 class="mt-3 max-w-2xl font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">{heroTitle}</h1>
+    <h1 class="mt-3 max-w-2xl font-display text-3xl font-bold leading-tight tracking-tight text-ink sm:text-5xl">{heroTitle}</h1>
     <p class="mt-6 max-w-2xl text-lg text-ink-soft">{heroText}</p>
     <div class="mt-8 flex flex-wrap gap-4">
       <a href={`${base}/tarifs`} class="inline-flex items-center justify-center rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5 hover:bg-signal">
@@ -78,7 +78,7 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="container-balise py-8">
+  <section class="reveal container-balise py-8">
     <h2 class="font-display text-2xl font-bold text-ink">Ce qu'on entend le plus souvent</h2>
     <div class="mt-8 grid gap-6 sm:grid-cols-3">
       {painPoints.map((p) => (
@@ -90,7 +90,7 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="container-balise py-16">
+  <section class="reveal container-balise py-16">
     <div class="rounded-3xl border border-line bg-paper-dim p-8 sm:p-10">
       <h2 class="font-display text-2xl font-bold text-ink">Exemple de structure de site pour ce métier</h2>
       <p class="mt-2 max-w-2xl text-sm text-ink-soft">{pagesNote}</p>
@@ -105,11 +105,11 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="container-balise py-8">
+  <section class="reveal container-balise py-8">
     <TestimonialCard quote={testimonial.quote} name={testimonial.name} role={testimonial.role} />
   </section>
 
-  <section class="container-balise py-16 pb-24">
+  <section class="reveal container-balise py-16 pb-24">
     <h2 class="font-display text-2xl font-bold text-ink">Questions fréquentes</h2>
     <div class="mt-8">
       <FAQAccordion items={faq} />
