@@ -1,42 +1,43 @@
 ---
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const columns = [
   {
     title: "Offre",
     links: [
-      { href: "/offre", label: "L'offre Balise" },
-      { href: "/tarifs", label: "Tarifs" },
-      { href: "/comment-ca-marche", label: "Comment ça marche" },
-      { href: "/realisations", label: "Réalisations" },
+      { href: `${base}/offre`, label: "L'offre Balise" },
+      { href: `${base}/tarifs`, label: "Tarifs" },
+      { href: `${base}/comment-ca-marche`, label: "Comment ça marche" },
+      { href: `${base}/realisations`, label: "Réalisations" },
     ],
   },
   {
     title: "Pour qui",
     links: [
-      { href: "/sites-internet/artisan", label: "Artisans" },
-      { href: "/sites-internet/profession-liberale", label: "Professions libérales" },
-      { href: "/sites-internet/restaurant", label: "Restaurants" },
-      { href: "/sites-internet/commerce-local", label: "Commerces locaux" },
-      { href: "/sites-internet/coach-independant", label: "Coachs & indépendants" },
-      { href: "/sites-internet/association", label: "Associations" },
+      { href: `${base}/sites-internet/artisan`, label: "Artisans" },
+      { href: `${base}/sites-internet/profession-liberale`, label: "Professions libérales" },
+      { href: `${base}/sites-internet/restaurant`, label: "Restaurants" },
+      { href: `${base}/sites-internet/commerce-local`, label: "Commerces locaux" },
+      { href: `${base}/sites-internet/coach-independant`, label: "Coachs & indépendants" },
+      { href: `${base}/sites-internet/association`, label: "Associations" },
     ],
   },
   {
     title: "Ressources",
     links: [
-      { href: "/blog", label: "Blog" },
-      { href: "/faq", label: "FAQ" },
-      { href: "/a-propos", label: "À propos" },
-      { href: "/contact", label: "Contact" },
+      { href: `${base}/blog`, label: "Blog" },
+      { href: `${base}/faq`, label: "FAQ" },
+      { href: `${base}/a-propos`, label: "À propos" },
+      { href: `${base}/contact`, label: "Contact" },
     ],
   },
   {
     title: "Confiance",
     links: [
-      { href: "/securite-donnees", label: "Sécurité & données" },
-      { href: "/mentions-legales", label: "Mentions légales" },
-      { href: "/cgv", label: "CGV" },
-      { href: "/politique-de-confidentialite", label: "Confidentialité" },
-      { href: "/cookies", label: "Cookies" },
+      { href: `${base}/securite-donnees`, label: "Sécurité & données" },
+      { href: `${base}/mentions-legales`, label: "Mentions légales" },
+      { href: `${base}/cgv`, label: "CGV" },
+      { href: `${base}/politique-de-confidentialite`, label: "Confidentialité" },
+      { href: `${base}/cookies`, label: "Cookies" },
     ],
   },
 ];
@@ -45,7 +46,7 @@ const columns = [
 <footer class="border-t border-line bg-paper-dim">
   <div class="container-balise grid gap-10 py-16 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
     <div>
-      <a href="/" class="flex items-center gap-2 font-display text-lg font-semibold text-ink">
+      <a href={`${base}/`} class="flex items-center gap-2 font-display text-lg font-semibold text-ink">
         <span class="flex h-8 w-8 items-center justify-center rounded-full bg-ink text-paper">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M12 3L20 20H4L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>

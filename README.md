@@ -24,17 +24,22 @@ Le déploiement est automatique via `.github/workflows/deploy.yml` à chaque pus
 
 1. Dans les paramètres du dépôt GitHub → **Settings → Pages**, choisir la source **GitHub Actions**.
 2. Pousser sur `main` : le workflow build le site et le publie automatiquement.
-3. Le site est accessible sur `https://<votre-compte>.github.io/<nom-du-repo>/` par défaut.
+3. **Important** : la branche par défaut du dépôt doit être `main` (Settings → General → Default branch), sinon l'environnement `github-pages` refuse le déploiement (échec instantané du job `deploy`, sans logs).
+4. Le site est actuellement accessible sur **https://johansimonneau.github.io/Balise/** (pas encore de domaine personnalisé).
+
+### Pourquoi `base: '/Balise'` dans `astro.config.mjs`
+
+Tant qu'aucun domaine personnalisé n'est branché, GitHub Pages sert le site dans un sous-dossier portant le nom du dépôt (`/Balise/`), pas à la racine. `astro.config.mjs` déclare donc `site: 'https://johansimonneau.github.io'` et `base: '/Balise'`, et tous les liens internes du code utilisent `import.meta.env.BASE_URL` pour rester corrects quel que soit l'environnement (local, preview, production).
 
 ### Nom de domaine personnalisé
 
-Pour utiliser un domaine comme `balise-web.fr` :
+Le jour où un domaine (ex. `balise-web.fr`) est acheté et branché :
 
 1. Achetez le domaine chez un registrar (OVH, Gandi, Namecheap...).
 2. Ajoutez un fichier `public/CNAME` contenant uniquement votre domaine, ex. `balise-web.fr`.
-3. Configurez chez votre registrar un enregistrement `ALIAS`/`ANAME` (ou 4 enregistrements `A` vers les IP GitHub Pages : `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) et un `CNAME` `www` vers `<votre-compte>.github.io`.
+3. Configurez chez votre registrar un enregistrement `ALIAS`/`ANAME` (ou 4 enregistrements `A` vers les IP GitHub Pages : `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) et un `CNAME` `www` vers `johansimonneau.github.io`.
 4. Dans **Settings → Pages**, renseignez le domaine personnalisé et activez "Enforce HTTPS".
-5. Mettez à jour `site` dans `astro.config.mjs` avec votre domaine final (utilisé pour le sitemap et les URLs canoniques).
+5. Dans `astro.config.mjs` : remettez `site` sur le nouveau domaine (ex. `https://balise-web.fr`) et **supprimez la ligne `base`** (ou mettez-la à `'/'`) — un domaine personnalisé sert le site à la racine, plus besoin de sous-dossier.
 
 ## À personnaliser avant mise en ligne commerciale
 
@@ -42,7 +47,7 @@ Pour utiliser un domaine comme `balise-web.fr` :
 - **`src/pages/contact.astro`** : le formulaire envoie déjà les demandes par e-mail à `johansimonneau.pro@gmail.com` via [FormSubmit](https://formsubmit.co) — aucun compte à créer, aucun nom de domaine requis. À la toute première soumission, FormSubmit envoie un e-mail d'activation à cette adresse : il faut cliquer une fois sur le lien de confirmation pour que les envois suivants partent automatiquement.
 - **`public/og-balise.svg`** : image de partage réseaux sociaux actuellement en SVG. Pour une compatibilité maximale (Facebook, LinkedIn), exportez une version PNG 1200x630 (par exemple via Canva) et remplacez la référence dans `src/components/SEO.astro`.
 - **`src/pages/realisations.astro`** : contient des exemples de structure de site, clairement labellisés comme tels. À remplacer progressivement par de vrais projets clients, avec leur accord.
-- **`astro.config.mjs`** : le champ `site` est réglé sur `https://balise-web.fr` à titre d'exemple — à ajuster selon le domaine réellement acheté.
+- **`astro.config.mjs`** : `site` + `base` reflètent l'adresse temporaire `https://johansimonneau.github.io/Balise/` — à ajuster (voir section "Nom de domaine personnalisé" ci-dessus) une fois un domaine acheté.
 
 ## Structure du contenu
 

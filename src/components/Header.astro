@@ -1,17 +1,18 @@
 ---
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const nav = [
-  { href: "/offre", label: "L'offre" },
-  { href: "/tarifs", label: "Tarifs" },
-  { href: "/realisations", label: "Réalisations" },
-  { href: "/blog", label: "Blog" },
-  { href: "/faq", label: "FAQ" },
+  { href: `${base}/offre`, label: "L'offre" },
+  { href: `${base}/tarifs`, label: "Tarifs" },
+  { href: `${base}/realisations`, label: "Réalisations" },
+  { href: `${base}/blog`, label: "Blog" },
+  { href: `${base}/faq`, label: "FAQ" },
 ];
 const current = Astro.url.pathname;
 ---
 
 <header class="sticky top-0 z-50 border-b border-line/80 bg-paper/90 backdrop-blur">
   <div class="container-balise flex h-16 items-center justify-between">
-    <a href="/" class="flex items-center gap-2 font-display text-lg font-semibold tracking-tight text-ink">
+    <a href={`${base}/`} class="flex items-center gap-2 font-display text-lg font-semibold tracking-tight text-ink">
       <span class="flex h-8 w-8 items-center justify-center rounded-full bg-ink text-paper">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M12 3L20 20H4L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
@@ -33,7 +34,7 @@ const current = Astro.url.pathname;
     </nav>
 
     <a
-      href="/contact"
+      href={`${base}/contact`}
       class="hidden rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-transform hover:-translate-y-0.5 hover:bg-moss md:inline-flex"
     >
       Démarrer mon site
@@ -59,7 +60,7 @@ const current = Astro.url.pathname;
           {item.label}
         </a>
       ))}
-      <a href="/contact" class="mt-2 rounded-full bg-ink px-4 py-2.5 text-center text-sm font-medium text-paper">
+      <a href={`${base}/contact`} class="mt-2 rounded-full bg-ink px-4 py-2.5 text-center text-sm font-medium text-paper">
         Démarrer mon site
       </a>
     </div>

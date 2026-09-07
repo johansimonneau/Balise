@@ -3,12 +3,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import CTABanner from "../components/CTABanner.astro";
 import TestimonialCard from "../components/TestimonialCard.astro";
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const siteOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "";
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Balise",
-  url: "https://balise-web.fr",
-  logo: "https://balise-web.fr/favicon.svg",
+  url: `${siteOrigin}${base}/`,
+  logo: `${siteOrigin}${base}/favicon.svg`,
   description:
     "Balise conçoit des sites internet vitrines pour les petites entreprises grâce à l'intelligence artificielle, à partir de 400€.",
   areaServed: "FR",
@@ -64,10 +67,10 @@ const steps = [
           Contenu rédigé, structure pensée pour le référencement, mise en ligne rapide. À partir de <strong class="text-ink">400€ net</strong>, sans abonnement obligatoire.
         </p>
         <div class="mt-8 flex flex-wrap items-center gap-4">
-          <a href="/tarifs" class="inline-flex items-center justify-center rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5 hover:bg-moss">
+          <a href={`${base}/tarifs`} class="inline-flex items-center justify-center rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5 hover:bg-moss">
             Voir la grille tarifaire
           </a>
-          <a href="/realisations" class="inline-flex items-center justify-center rounded-full border border-line bg-white px-6 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-ink">
+          <a href={`${base}/realisations`} class="inline-flex items-center justify-center rounded-full border border-line bg-white px-6 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-ink">
             Voir des exemples
           </a>
         </div>
@@ -112,12 +115,12 @@ const steps = [
       <p class="text-center text-sm font-medium uppercase tracking-wide text-stone">Pensé pour ceux qui n'ont pas le temps</p>
       <div class="mt-8 grid grid-cols-2 gap-4 text-center sm:grid-cols-3 lg:grid-cols-6">
         {[
-          { href: "/sites-internet/artisan", label: "Artisans" },
-          { href: "/sites-internet/profession-liberale", label: "Professions libérales" },
-          { href: "/sites-internet/restaurant", label: "Restaurants" },
-          { href: "/sites-internet/commerce-local", label: "Commerces locaux" },
-          { href: "/sites-internet/coach-independant", label: "Coachs & indépendants" },
-          { href: "/sites-internet/association", label: "Associations" },
+          { href: `${base}/sites-internet/artisan`, label: "Artisans" },
+          { href: `${base}/sites-internet/profession-liberale`, label: "Professions libérales" },
+          { href: `${base}/sites-internet/restaurant`, label: "Restaurants" },
+          { href: `${base}/sites-internet/commerce-local`, label: "Commerces locaux" },
+          { href: `${base}/sites-internet/coach-independant`, label: "Coachs & indépendants" },
+          { href: `${base}/sites-internet/association`, label: "Associations" },
         ].map((item) => (
           <a href={item.href} class="rounded-xl border border-line bg-white px-4 py-4 text-sm font-medium text-ink-soft transition-colors hover:border-moss hover:text-moss">
             {item.label}
@@ -142,7 +145,7 @@ const steps = [
         </div>
       ))}
     </div>
-    <a href="/comment-ca-marche" class="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-moss hover:underline">
+    <a href={`${base}/comment-ca-marche`} class="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-moss hover:underline">
       Voir le détail du processus →
     </a>
   </section>

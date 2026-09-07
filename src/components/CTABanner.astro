@@ -5,11 +5,13 @@ interface Props {
   cta?: string;
   href?: string;
 }
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 const {
   title = "Prêt à poser la première pierre de votre site ?",
   description = "Réponse sous 24h, mise en ligne en quelques jours. Sans jargon, sans mauvaise surprise sur la facture.",
   cta = "Démarrer mon projet",
-  href = "/contact",
+  href = `${base}/contact`,
 } = Astro.props;
 ---
 

@@ -10,7 +10,6 @@ interface FaqItem {
 }
 interface Props {
   metier: string;
-  path: string;
   metaTitle: string;
   metaDescription: string;
   heroKicker: string;
@@ -23,9 +22,10 @@ interface Props {
   testimonial: { quote: string; name: string; role: string };
 }
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 const {
   metier,
-  path,
   metaTitle,
   metaDescription,
   heroKicker,
@@ -63,16 +63,16 @@ const jsonLd = [
 ];
 ---
 
-<BaseLayout title={metaTitle} description={metaDescription} path={path} jsonLd={jsonLd}>
+<BaseLayout title={metaTitle} description={metaDescription} jsonLd={jsonLd}>
   <section class="container-balise pt-16 pb-12">
     <p class="text-sm font-medium uppercase tracking-wide text-moss">{heroKicker}</p>
     <h1 class="mt-3 max-w-2xl font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">{heroTitle}</h1>
     <p class="mt-6 max-w-2xl text-lg text-ink-soft">{heroText}</p>
     <div class="mt-8 flex flex-wrap gap-4">
-      <a href="/tarifs" class="inline-flex items-center justify-center rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5 hover:bg-moss">
+      <a href={`${base}/tarifs`} class="inline-flex items-center justify-center rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5 hover:bg-moss">
         Voir le tarif — 400€
       </a>
-      <a href="/contact" class="inline-flex items-center justify-center rounded-full border border-line bg-white px-6 py-3.5 text-sm font-semibold text-ink hover:border-ink">
+      <a href={`${base}/contact`} class="inline-flex items-center justify-center rounded-full border border-line bg-white px-6 py-3.5 text-sm font-semibold text-ink hover:border-ink">
         Demander un devis
       </a>
     </div>

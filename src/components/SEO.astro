@@ -8,16 +8,18 @@ interface Props {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 const {
   title,
   description,
   path = Astro.url.pathname,
-  image = "/og-balise.svg",
+  image = `${base}/og-balise.svg`,
   noindex = false,
   jsonLd,
 } = Astro.props;
 
-const site = Astro.site?.toString().replace(/\/$/, "") ?? "https://balise-web.fr";
+const site = Astro.site?.toString().replace(/\/$/, "") ?? "https://johansimonneau.github.io";
 const canonical = `${site}${path}`;
 const fullTitle = title.includes("Balise") ? title : `${title} · Balise`;
 const jsonLdList = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
