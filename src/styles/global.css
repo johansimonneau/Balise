@@ -5,15 +5,15 @@
   --font-display: "Cabinet Grotesk", "Inter", ui-sans-serif, sans-serif;
 
   --color-ink: #0b0e14;
-  --color-ink-soft: #141925;
-  --color-paper: #faf9f6;
-  --color-paper-dim: #f1efe9;
-  --color-stone: #8a8578;
-  --color-moss: #2f5d4a;
-  --color-moss-light: #e7efe9;
-  --color-clay: #c65d3b;
-  --color-clay-light: #fbe9e2;
-  --color-line: #e4e1d8;
+  --color-ink-soft: #4a5163;
+  --color-paper: #f5f6f9;
+  --color-paper-dim: #eceef3;
+  --color-stone: #6b7280;
+  --color-signal: #3a4bf0;
+  --color-signal-light: #e7e9fd;
+  --color-clay: #e2711d;
+  --color-clay-light: #fdeee0;
+  --color-line: #e0e3ea;
 }
 
 html {
@@ -68,7 +68,7 @@ body {
   color: var(--color-ink-soft);
 }
 .prose-balise a {
-  color: var(--color-moss);
+  color: var(--color-signal);
   text-decoration: underline;
   text-underline-offset: 2px;
 }

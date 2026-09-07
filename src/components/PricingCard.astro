@@ -42,7 +42,7 @@ const {
   <ul class="mt-8 flex-1 space-y-3">
     {features.map((feature) => (
       <li class="flex items-start gap-2.5 text-sm">
-        <svg class={`mt-0.5 h-4 w-4 shrink-0 ${highlight ? "text-clay-light" : "text-moss"}`} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <svg class={`mt-0.5 h-4 w-4 shrink-0 ${highlight ? "text-clay-light" : "text-signal"}`} viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M5 12.5L9.5 17L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <span class={highlight ? "text-paper/90" : "text-ink-soft"}>{feature}</span>
@@ -52,7 +52,7 @@ const {
 
   <a
     href={href}
-    class={`mt-8 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-medium transition-transform hover:-translate-y-0.5 ${highlight ? "bg-clay text-white hover:bg-clay/90" : "bg-ink text-paper hover:bg-moss"}`}
+    class={`mt-8 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-medium transition-transform hover:-translate-y-0.5 ${highlight ? "bg-clay text-white hover:bg-clay/90" : "bg-ink text-paper hover:bg-signal"}`}
   >
     {cta}
   </a>
